@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(179, 159, 134);
+  background-color: rgb(230, 230, 230);
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
@@ -8,29 +8,24 @@ body {
   font-size: xx-large;
   font-weight: 900;
   text-align: center;
-  border-style: solid;
   border-radius: 50px;
-  border-color: rgb(0, 0, 0);
-  background-color: rgb(165, 141, 111);
   margin: 25px;
+  text-transform: uppercase;
 }
 
 .book-shelf {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  border-style: solid;
-  border-radius: 50px;
   height: 60vh;
   margin: 25px;
   padding: 25px;
 }
 
 .footer {
-  border-style: solid;
-  border-radius: 50px;
-  height: 10vh;
-  margin: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
@@ -39,12 +34,25 @@ body {
 }
 
 .book {
-  border-style: solid;
   border-radius: 2px;
   width: 150px;
   height: 250px;
   margin: 25px;
   text-align: center;
   font-size: large;
-  background-color:navajowhite;
+  background-color: rgb(120, 199, 245);
+}
+
+.button {
+  font-size: larger;
+}
+
+.add-book-form {
+  display: flex;
+  flex-direction: row;
+}
+
+.radio-buttons{
+  display: flex;
+  flex-direction: column;
 }

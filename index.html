@@ -15,7 +15,40 @@
     <div class="container">
       <div class="header"><h1>My Digital Library</h1></div>
       <div id="book-shelf" class="book-shelf"></div>
-      <div class="footer"></div>
+      <div class="footer">
+        <form id="add-book-form" class="add-book-form">
+          <label for="title"
+            >Title
+            <input type="text" id="title" name="title" />
+          </label>
+          <label for="author"
+            >Author
+            <input type="text" id="author" name="author" />
+          </label>
+          <label for="pages"
+            >Pages <input type="text" id="pages" name="pages" />
+          </label>
+          <div class="radio-buttons">
+            <div><p>Have you read this book?</p></div>
+            <div>
+              <label for="haveRead"
+                >Yes
+                <input type="radio" id="haveRead" name="haveRead" value="Yes" />
+              </label>
+              <label for="haveRead"
+                >No
+                <input type="radio" id="haveNotRead" name="haveNotRead" value="No" />
+              </label>
+              <input
+                id="new-book"
+                class="button"
+                type="submit"
+                value="Add New Book"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
     <script src="scripts.js"></script>
   </body>
