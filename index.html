@@ -12,44 +12,55 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="header"><h1>My Digital Library</h1></div>
+    <header>
+      <h1>My Digital Library</h1>
+    </header>
+    <section>
       <div id="book-shelf" class="book-shelf"></div>
-      <div class="footer">
+    </section>
+    <footer>
+      <div class="form-popup" id="myForm">
         <form id="add-book-form" class="add-book-form">
-          <label for="title"
-            >Title
-            <input type="text" id="title" name="title" />
-          </label>
-          <label for="author"
-            >Author
-            <input type="text" id="author" name="author" />
-          </label>
-          <label for="pages"
-            >Pages <input type="text" id="pages" name="pages" />
-          </label>
+          <h2>Enter your book details</h2>
+
+          <label for="title">Title</label>
+          <input type="text" id="title" name="title" required="true" />
+
+          <label for="author">Author</label>
+          <input type="text" id="author" name="author" required="true" />
+
+          <label for="pages">Pages </label>
+          <input type="text" id="pages" name="pages" required="true" />
+          <h3>Have you read this book?</h3>
           <div class="radio-buttons">
-            <div><p>Have you read this book?</p></div>
             <div>
               <label for="haveRead"
                 >Yes
                 <input type="radio" id="haveRead" name="haveRead" value="Yes" />
               </label>
-              <label for="haveRead"
+              <label for="haveNotRead"
                 >No
-                <input type="radio" id="haveNotRead" name="haveNotRead" value="No" />
+                <input
+                  type="radio"
+                  id="haveNotRead"
+                  name="haveRead"
+                  value="No"
+                />
               </label>
-              <input
-                id="new-book"
-                class="button"
-                type="submit"
-                value="Add New Book"
-              />
             </div>
           </div>
+          <input
+            id="new-book"
+            class="button"
+            type="submit"
+            value="Add New Book"
+            onclick="closeForm()"
+          />
         </form>
       </div>
-    </div>
+
+      <button class="open-button" onclick="openForm()">Add New Book</button>
+    </footer>
     <script src="scripts.js"></script>
   </body>
 </html>

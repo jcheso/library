@@ -1,16 +1,34 @@
-body {
-  background-color: rgb(230, 230, 230);
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+* {
+  box-sizing: border-box;
 }
 
-.header {
-  font-size: xx-large;
-  font-weight: 900;
+body {
+  background-color: #f5f0f6;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+header {
+  background-color: #f5f0f6;
+  padding: 30px;
   text-align: center;
-  border-radius: 50px;
-  margin: 25px;
+  font-size: 35px;
   text-transform: uppercase;
+  color: #2b4162;
+}
+
+section {
+  display: -webkit-flex;
+  display: flex;
+}
+
+footer {
+  background-color: #f5f0f6;
+  padding: 10px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .book-shelf {
@@ -35,24 +53,196 @@ body {
 
 .book {
   border-radius: 2px;
-  width: 150px;
-  height: 250px;
+  width: 200px;
+  height: 400px;
   margin: 25px;
   text-align: center;
-  font-size: large;
-  background-color: rgb(120, 199, 245);
-}
-
-.button {
-  font-size: larger;
-}
-
-.add-book-form {
-  display: flex;
-  flex-direction: row;
-}
-
-.radio-buttons{
+  background-color: #d7b377;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  color: #2b4162;
+  border: #2b4162;
+  border-style: solid;
+  box-shadow: 5px 5px #2b4162;
+}
+
+.radio-buttons {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #385f71;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2b4162;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2b4162;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #2b4162;
+  color: #f1f1f1;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.add-book-form {
+  max-width: 300px;
+  padding: 10px;
+  background-color: #385f71;
+}
+
+/* Full-width input fields */
+.add-book-form input[type="text"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  color: #2b4162;
+}
+
+/* When the inputs get focus, do something */
+.add-book-form input[type="text"]:focus {
+  background-color: #f1f1f1;
+  outline: none;
+  color: #2b4162;
+}
+
+/* Set a style for the submit/login button */
+.add-book-form .button {
+  background-color: #2b4162;
+  color: #f1f1f1;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 80%;
+  opacity: 0.8;
+  margin: 15px;
+  align-items: center;
+}
+
+/* Add a red background color to the cancel button */
+
+/* Add some hover effects to buttons */
+.add-book-form .button:hover,
+.open-button:hover,
+.remove-btn:hover {
+  opacity: 1;
+}
+
+.book-title {
+  font-weight: 900;
+  margin: 10px;
+}
+
+.book-author {
+  font-weight: 600;
+  margin: 10px;
+
+}
+
+.book-pages {
+  font-size: smaller;
+  font-weight: 500;
+  margin: 10px;
+
+}
+
+.book-read {
+  font-size: smaller;
+  margin: 10px;
+  font-weight: 700;
+
+}
+
+.switch-div {
+  margin: 10px;
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.remove-btn {
+  background-color: #2b4162;
+  color: #f1f1f1;
+  padding: 8px 10px;
+  border: none;
+  cursor: pointer;
+  width: 80%;
+  opacity: 0.8;
+  margin: 7.5px;
+  align-items: center;
 }
