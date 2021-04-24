@@ -1,10 +1,12 @@
 let myLibrary = [];
 
-function Book(title, author, pages, haveRead) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.haveRead = haveRead;
+class Book {
+  constructor(title, author, pages, haveRead){
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.haveRead = haveRead;
+  }
 }
 
 const addBookToLibrary = (title, author, pages, haveRead) =>
@@ -17,7 +19,6 @@ addBookToLibrary("Zero to One: Notes on Startups, or How to Build the Future", "
 
 console.table(myLibrary);
 
-// Need to fix indexing
 function displayBook(bookObj, index) {
   console.log(bookObj);
   console.log(index);
